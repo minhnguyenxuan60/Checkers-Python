@@ -1,6 +1,12 @@
-import pygame
+import subprocess
 import random
 from datetime import datetime
+try:
+    import pygame
+except ModuleNotFoundError:
+    subprocess.call(['pip', 'install', 'pygame'])
+    import pygame
+
 print("This program needs module pygame v2.1.2 installed IDE in order to run properly\n"
       "For more information, check the provided design document or visit https://pypi.org/project/pygame/")
 print("This project game is checkers. It follows the standard ruleset for the game."
